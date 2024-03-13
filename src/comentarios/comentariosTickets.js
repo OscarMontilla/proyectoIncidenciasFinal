@@ -1,6 +1,6 @@
 import { bd } from "../bd/bdComentarios.js";
 
-export const comentario2 = (usuario, fecha, contenido) => {
+export const comentarioTickets = (usuario, fecha, contenido) => {
     const template = `
         <div class="mt-4">
             <div class="card p-3">
@@ -15,13 +15,13 @@ export const comentario2 = (usuario, fecha, contenido) => {
     return template;
 }
 
-export const comentarios2 = {
+export const comentariosTickets = {
     template: `<div id="comentarios">Comentarios</div>`,
     script: () => {
         let html = '';
 
         bd.forEach(element => {
-            html += comentario2(element.usuario, element.fecha, element.contenido);
+            html += comentarioTickets(element.usuario, element.fecha, element.contenido);
         });
         
         document.querySelector('#comentarios').innerHTML = html;
