@@ -67,10 +67,10 @@ export const vistaRegistre = {
                             document.querySelector('main').innerHTML=vistaLogin.template
                             vistaLogin.script()
                         }else{
-                            alert('La contraseña ya esta en uso')
+                            alert('Esta contraseña ya esta en uso')
                         }
                     }else{
-                        alert('Ese correo esta ya en uso')
+                        alert('Este correo esta ya en uso')
                     }
                 });
             }

@@ -26,7 +26,7 @@ export const vistaLogin = {
             <a class="d-block text-end" href="#">¿Has olvidado tu contraseña?</a>
             <a id="iniciarSesion" class="btn btn-primary w-100 mt-3" href="#">Iniciar sesión</a>
         </form>
-        <a id="registrox" class="d-block mt-5 btn btn-secondary mx-auto" href="#"
+        <a id="irRegistro" class="d-block mt-5 btn btn-secondary mx-auto" href="#"
             >¿Eres nuevo? Regístrate</a
         >
     </div>
@@ -68,7 +68,7 @@ export const vistaLogin = {
 
         
 
-        document.querySelector('#registrox').addEventListener('click',(event)=>{
+        document.querySelector('#irRegistro').addEventListener('click',(event)=>{
             event.preventDefault
             document.querySelector('main').innerHTML=vistaRegistre.template
             vistaRegistre.script()

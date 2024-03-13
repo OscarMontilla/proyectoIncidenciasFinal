@@ -159,7 +159,6 @@ export const vistaPanel = {
     
       document.querySelectorAll('#comentarios').forEach(elemento => {
         elemento.addEventListener('click', () => {
-            console.log('hola');
             document.querySelector('main').innerHTML = vistaComentarioTickets.template;
             vistaComentarioTickets.script();
         });
@@ -167,23 +166,17 @@ export const vistaPanel = {
     });
     document.querySelectorAll('.eliminar').forEach((elemento) => {
       elemento.addEventListener('click', (e) => {
-        console.log('Eliminar Ticket - Evento de clic disparado');
         
         const codigoTicket = elemento.getAttribute('data-codigo');
-        console.log('codigoTicket', codigoTicket);
-    
         
         const index = tickets.findIndex((ticket) => ticket.codigo === codigoTicket);
-        console.log('index', index);
     
         if (index !== -1) {
           tickets.splice(index, 1);
         
          
           vistaPanel.script();
-        } else {
-          console.log('Ticket no encontrado en el array');
-        }
+        } 
       });
     });
     
